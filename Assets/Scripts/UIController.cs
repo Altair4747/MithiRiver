@@ -8,6 +8,8 @@ public class UIController : MonoBehaviour
     public static UIController instance;
 
     public GameObject[] GoToHide;
+    public Image LeftPage;
+
     public GameObject Fish;
     public GameObject SideImage;
 
@@ -28,7 +30,7 @@ public class UIController : MonoBehaviour
         foreach(var go in GoToHide){
             go.SetActive(false);
         }
-
+        LeftPage.color = new Color(LeftPage.color.r, LeftPage.color.g, LeftPage.color.b, 1f);
         Fish.SetActive(true);
         SideImage.SetActive(true);
     }
